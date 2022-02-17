@@ -1,8 +1,6 @@
 class User < ApplicationRecord 
-  validates_presence_of :name,
-                        :email,
-                        :status,
-                        :password_digest
+  validates_presence_of :email,
+                        :status
   
   validates :email, uniqueness: true
   has_many :user_parties

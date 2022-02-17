@@ -10,8 +10,14 @@ class UserController < ApplicationController
   end
 
   def create
-    user = User.create!(user_params)
-    redirect_to user_path(user.id)
+    user = User.create(user_params)
+    if user.save
+      flash[:success] = "User Created!"
+      redirect_to user_path(user.id)
+    elsif params[:password].empty? || params[:password_confirmation].empty?
+      flash[:error] = "Fill out the password!"
+      redirect_to register_path
+    end 
   end
 
   private

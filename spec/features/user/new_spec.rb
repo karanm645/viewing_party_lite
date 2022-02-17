@@ -20,7 +20,20 @@ RSpec.describe 'viewing party homepage' do
 
       expect(page).to have_content('Joker')
     end 
+  end 
+
+  describe 'sad path' do 
+    scenario 'user doesn/t fill out matching passwords' do 
+      visit "/register"
+      expect(current_path).to eq("/register")
+      fill_in :name, with: 'users name'
+      fill_in :email, with: 'xyzbadman@gmail.com'
+      fill_in :password, with: ''
+      fill_in :password_confirmation, with: ''
+      click_button "Create New User"
+      
+      expect(current_path).to eq(register_path)
+      expect(page).to have_content 'Fill out the password!'
+    end 
   end
-
-
 end 
