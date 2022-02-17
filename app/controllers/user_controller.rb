@@ -4,8 +4,9 @@ class UserController < ApplicationController
     @parties = ViewingParty.where(host_id: @user.id)
   end
 
+  #user = User.find_by
+  #user.authenticate('') #string is password (params[:password])
   def new 
-
   end
 
   def create
@@ -15,6 +16,6 @@ class UserController < ApplicationController
 
   private
   def user_params
-    params.permit(:name, :email)    
+    params.permit(:name, :email, :password, :password_confirmation)    
   end
 end

@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe 'movie show page' do
-  let!(:user_1) {User.create!(name: "Alfred", email: "alfred@butler.net", status: 0)}
-  let!(:user_2) {User.create!(name: "Bruce", email: "bruced@boss.net", status: 0)}
-  let!(:user_3) {User.create!(name: "Oswald", email: "oswald@cobblepot.gotham", status: 0)}
+  let!(:user_1) {User.create!(name: "Alfred", email: "alfred@butler.net", status: 0, password_digest: "password1")}
+  let!(:user_2) {User.create!(name: "Bruce", email: "bruced@boss.net", status: 0, password_digest: "password2")}
+  let!(:user_3) {User.create!(name: "Oswald", email: "oswald@cobblepot.gotham", status: 0, password_digest: "password3")}
 
   it 'has a link to take the user back to the homepage' do 
     visit user_movie_path(user_1, 278)
