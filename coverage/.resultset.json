@@ -36,33 +36,11 @@
           null
         ]
       },
-      "/Users/karanmehta/3module/karan_viewing_party_lite/viewing_party_lite/app/controllers/user_controller.rb": {
+      "/Users/karanmehta/3module/karan_viewing_party_lite/viewing_party_lite/app/controllers/homepage_controller.rb": {
         "lines": [
           1,
           1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          2,
-          2,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          2,
+          3,
           null,
           null
         ]
@@ -72,6 +50,49 @@
           null,
           null,
           1,
+          null
+        ]
+      },
+      "/Users/karanmehta/3module/karan_viewing_party_lite/viewing_party_lite/app/controllers/users_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          5,
+          5,
+          1,
+          null,
+          4,
+          4,
+          null,
+          null,
+          null,
+          1,
+          1,
+          0,
+          null,
           null
         ]
       },
@@ -243,17 +264,6 @@
         "branches": {
         }
       },
-      "/Users/karanmehta/3module/karan_viewing_party_lite/viewing_party_lite/app/controllers/homepage_controller.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
       "/Users/karanmehta/3module/karan_viewing_party_lite/viewing_party_lite/app/controllers/movie_controller.rb": {
         "lines": [
           0,
@@ -372,6 +382,6 @@
         }
       }
     },
-    "timestamp": 1645073304
+    "timestamp": 1645146735
   }
 }

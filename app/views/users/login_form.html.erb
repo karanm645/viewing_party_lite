@@ -1,0 +1,11 @@
+<%= form_with url: login_path, method: :get, local: true do |form| %>
+  <%= form.text_field :name %>
+  <%= form.label :name %>
+  <%= form.email_field :email %>
+  <%= form.label :email %>
+  <%= form.password_field :password %>
+  <%= form.label :password %>
+  <%= form.password_field :password_confirmation %>
+  <%= form.label :password_confirmation %>
+  <%= form.submit "login"  %>
+<% end %>

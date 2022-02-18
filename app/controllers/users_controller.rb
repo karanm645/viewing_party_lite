@@ -1,4 +1,4 @@
-class UserController < ApplicationController 
+class UsersController < ApplicationController 
   def show 
     @user = User.find(params[:id])
     @parties = ViewingParty.where(host_id: @user.id)
@@ -17,8 +17,20 @@ class UserController < ApplicationController
     elsif params[:password].empty? || params[:password_confirmation].empty?
       flash[:error] = "Fill out the password!"
       redirect_to register_path
+    else 
+      redirect_to register_path 
     end 
   end
+
+  def login_form 
+    @user = User.find_by(email: params[:email])
+    if @user && @user.authenticate(params[:password]) && params[:password] == params[:password_confirmation]
+      redirect_to user_path(@user)
+    else 
+      render :login_form 
+      flash[:error] = "Invalid Credentials!"
+    end 
+  end 
 
   private
   def user_params
