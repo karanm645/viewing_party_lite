@@ -33,7 +33,6 @@ RSpec.describe 'Login Form' do
       fill_in :password_confirmation, with: "abcdef"
 
       click_button "login"
-      save_and_open_page
       expect(current_path).to eq("/login")
     end 
   end 
