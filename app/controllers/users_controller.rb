@@ -11,6 +11,7 @@ class UsersController < ApplicationController
 
   def create
     user = User.create(user_params)
+    session[:user_id] = user.id
     if user.save
       flash[:success] = "User Created!"
       redirect_to user_path(user.id)
@@ -25,10 +26,11 @@ class UsersController < ApplicationController
   def login_form 
     @user = User.find_by(email: params[:email])
     if @user && @user.authenticate(params[:password]) && params[:password] == params[:password_confirmation]
+      session[:user_id] = @user.id
       redirect_to user_path(@user)
     else 
       render :login_form 
-      flash[:error] = "Invalid Credentials!"
+      flash[:error] = "Invalid Credentials!" # make sure you fix this because it shows up when you're logged in
     end 
   end 
 
